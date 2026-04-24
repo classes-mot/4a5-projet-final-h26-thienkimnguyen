@@ -1,8 +1,8 @@
 import logo from "../../assets/placementHolder.jpg";
 import React from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Header.css";
-//import NavLink from "../Navigation/NavLink.jsx";
+import NavLink from "../Navigation/NavLink.jsx";
 
 
 function Header(){
@@ -18,9 +18,9 @@ function Header(){
             <h1>
                 <Link to="/">{title}</Link>
             </h1>
-            {/* <nav>
+            <nav>
                 <NavLink/>
-            </nav> */}
+            </nav>
         </header>
     );
 };

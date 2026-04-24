@@ -10,9 +10,9 @@ const routerLoggedIn = createBrowserRouter([
     element: <RootLayout />,
     errorElement: <ErrorPage />,
     children: [
-      //{ path : "", element: <about></about>}
-      //{ path : "add", element: <order></oder>}
-      //{ path : "login", element: <Navigate to="/" replace>}
+    //   { path : "", element: <about></about>}
+    //   { path : "add", element: <order></oder>}
+    //   { path : "login", element: <Navigate to="/" replace>}
     ],
   },
 ]);

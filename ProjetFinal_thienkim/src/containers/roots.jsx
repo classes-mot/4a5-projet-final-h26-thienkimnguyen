@@ -1,4 +1,4 @@
-import { NavLink, Oulet } from "react-router-dom";
+import { NavLink, OulOutletet } from "react-router-dom";
 import Header from "../components/Header/Header.jsx";
 
 function RootLayout(){
@@ -6,7 +6,7 @@ function RootLayout(){
         <>
             <Header/>
             <main>
-                <Oulet/>
+                <Outlet/>
             </main>
         </>
     );
