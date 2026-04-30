@@ -1,4 +1,4 @@
-import { NavLink, OulOutletet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import Header from "../components/Header/Header.jsx";
 
 function RootLayout(){

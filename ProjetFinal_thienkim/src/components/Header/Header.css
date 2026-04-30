@@ -1,11 +1,11 @@
 .head-banner{
     color: rgb(255, 204, 0);
-    background-color: rgb(137, 187, 245);
+    background-color: #fee5c7;
     display: flex;
     /*Position du titre*/
     justify-content: left;
     align-items: center;
-    padding: 15px;
+    padding-right: 20px;
     flex-direction: row;
     /* positionner en haut du page et toucher les deux cotes*/
     position: relative;
@@ -17,6 +17,12 @@
 .logo{
     height: auto;
     width: 75px;
+    margin-left: 1rem;
+}
+
+.title{
+    padding-left: 25px;
+    margin-right: auto;
     margin-left: 1rem;
 }
 

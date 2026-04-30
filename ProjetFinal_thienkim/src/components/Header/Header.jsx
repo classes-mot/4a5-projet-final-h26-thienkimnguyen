@@ -1,9 +1,8 @@
-import logo from "../../assets/placementHolder.jpg";
+import logo from "../../assets/placementHolder.png";
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 import NavLink from "../Navigation/NavLink.jsx";
-
 
 function Header(){
     let title = "Placement Title";
@@ -15,7 +14,7 @@ function Header(){
                 <span/>
             </button>
             <img src={logo} alt={title} className="logo"/>
-            <h1>
+            <h1 className="title">
                 <Link to="/">{title}</Link>
             </h1>
             <nav>

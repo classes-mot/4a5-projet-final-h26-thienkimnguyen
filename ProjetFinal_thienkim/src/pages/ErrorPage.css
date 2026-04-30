@@ -1,0 +1,33 @@
+.error-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.error-main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.error-box {
+    background-color: #ffd8a8;
+    color: #f4ac54;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+}
+
+.error-box h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.error-box h2 {
+    margin: 10px 0;
+}

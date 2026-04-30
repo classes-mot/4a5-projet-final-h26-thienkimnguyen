@@ -12,6 +12,7 @@ const routerLoggedIn = createBrowserRouter([
     children: [
     //   { path : "", element: <about></about>}
     //   { path : "add", element: <order></oder>}
+    //   { path : "review, element: <review></review>"}
     //   { path : "login", element: <Navigate to="/" replace>}
     ],
   },
