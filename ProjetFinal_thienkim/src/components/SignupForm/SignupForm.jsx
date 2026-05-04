@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./SignupForm.css";
 
 function SignupForm() {
     const [passwordNotEqual, setPasswordNotEqual] = useState(false);
@@ -19,8 +20,8 @@ function SignupForm() {
 
     return (
         <form onSubmit={handleSubmit} className="signup-form">
-            <h1>S'enregistrer</h1>
-            <p className="subtitle">Goûtez au Vietnam à chaque bouchée.</p>
+            <h1 className="titre">S'enregistrer</h1>
+            <h2 className="message">Goûtez au Vietnam à chaque bouchée.</h2>
 
             {/* Les inputs des noms et des prénoms des utilisateurs */}
             <div className="control-row">
@@ -62,6 +63,8 @@ function SignupForm() {
                     <input type="checkbox" name="news" /> 
                     J'aimerais recevoir par courriel les nouveaux ajouts et les offres.
                 </label>
+            </div>
+            <div className="control-checkbox">
                 <label>
                     <input type="checkbox" name="terms" required /> 
                     J'accepte les conditions générales.
