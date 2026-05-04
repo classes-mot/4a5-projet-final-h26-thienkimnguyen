@@ -7,6 +7,8 @@ import LoginForm from './components/LoginForm/LoginForm.jsx';
 import { useState } from 'react';
 import { AuthContext } from './context/AuthContext.js';
 
+import Signup from './pages/Signup.jsx';
+
 const routerLoggedIn = createBrowserRouter([
   {
     path: "/",
@@ -30,6 +32,7 @@ const routerNotLoggedIn = createBrowserRouter([
     children: [
       // { path: "", element: <About></About> },
       { path: "/login", element: <LoginForm></LoginForm>},
+      { path: "/signup", element: <Signup></Signup>},
     ],
   },
 ]);

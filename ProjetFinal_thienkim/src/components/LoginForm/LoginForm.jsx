@@ -1,6 +1,7 @@
 import { useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext.js";
+
 
 import "../LoginForm/LoginForm.css";
 
@@ -27,7 +28,7 @@ function LoginForm(){
         <h2>Se Connecter</h2>
 
         <div className="control-email">
-            <label htmlFor="email">Address Courriel</label>
+            <label htmlFor="email">Adresse Courriel</label>
             <input id="email" name="email" type="email" required></input>
         </div>
 
@@ -41,7 +42,9 @@ function LoginForm(){
 
             <span className="signup-text">
                 Vous n'avez pas de compte?
-                <button type="button" className="button-signup">S'enregistrer</button>
+                <Link to="/signup" className="button-signup">
+                    Inscrivez-vous dès maintenant
+                </Link>
             </span>
         </p>
     </form>
