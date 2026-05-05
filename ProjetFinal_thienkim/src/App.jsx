@@ -1,11 +1,15 @@
+import { useState } from 'react';
+import { AuthContext } from './context/AuthContext.js';
+import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
 import './App.css'
 import "./components/Header/Header.jsx";
-import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
 import RootLayout from "./containers/roots.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
 import LoginForm from './components/LoginForm/LoginForm.jsx';
-import { useState } from 'react';
-import { AuthContext } from './context/AuthContext.js';
+import About from "./components/About/About.jsx";
+
+
+
 
 import Signup from './pages/Signup.jsx';
 
@@ -15,7 +19,7 @@ const routerLoggedIn = createBrowserRouter([
     element: <RootLayout />,
     errorElement: <ErrorPage />,
     children: [
-      // { path : "", element: <About></About>},
+      { path : "", element: <About></About>},
       // { path : "add", element: <Order></Order>},
       // { path : "/review", element: <Review></Review>},
       // { path : "/review/new", element: <NewReview></NewReview>},
@@ -30,7 +34,7 @@ const routerNotLoggedIn = createBrowserRouter([
     element: <RootLayout></RootLayout>,
     errorElement: <ErrorPage></ErrorPage>,
     children: [
-      // { path: "", element: <About></About> },
+      { path: "", element: <About></About> },
       { path: "/login", element: <LoginForm></LoginForm>},
       { path: "/signup", element: <Signup></Signup>},
     ],

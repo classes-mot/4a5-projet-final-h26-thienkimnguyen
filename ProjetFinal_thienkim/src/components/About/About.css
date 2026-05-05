@@ -1,0 +1,80 @@
+.about-container {
+    max-width: 45rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color : #ffdd87;
+}
+
+.about-title {
+    color: #000000;
+    text-align: center;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+hr {
+    width: 40%;
+    margin: auto;
+    border: 1px solid;
+}
+
+.about-information p {
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.about-information h3 {
+    text-align: center;
+}
+
+.openings {
+    background-color: #3e7b1e;
+    color: #fdf5e6;
+    padding: 15px 25px;
+    border-radius: 8px;
+    width: fit-content;
+    margin: 0 auto 2rem auto;
+    margin-bottom: 30px;
+}
+
+.about-nouvelle h3 {
+    text-align: center;
+}
+
+.about-nouvelle p {
+    text-align: center;
+}
+
+.address-link {
+    color: #4caf50;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #fcd573;
+    padding: 0px 10px 10px 10px;
+}
+
+.address-link:hover {
+    text-decoration: underline;
+}
+
+.about-nouvelle {
+    width: 100%;
+    background-color: #fcd573;
+}
+
+.about-information {
+    width: 100%;
+}
+
+.about-application h3{
+    text-align: center;
+}
+
+.about-application p{
+    text-align: center;
+}
