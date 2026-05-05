@@ -1,0 +1,32 @@
+.main-foot_banner {
+    background-color: #ffb341;
+    padding: 30px 0;
+    text-align: center;
+    color: white;
+}
+
+.footer-nav-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.foot-link {
+    text-decoration: none;
+    color: #9da3a8;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.foot-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.copyright {
+    font-size: 0.8rem;
+    color: #5c636a;
+    margin-top: 20px;
+}

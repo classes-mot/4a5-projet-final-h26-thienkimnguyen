@@ -3,6 +3,7 @@ import { AuthContext } from './context/AuthContext.js';
 import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
 import './App.css'
 import "./components/Header/Header.jsx";
+import "./components/Footer/Footer.jsx";
 import RootLayout from "./containers/roots.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
 import LoginForm from './components/LoginForm/LoginForm.jsx';
