@@ -3,12 +3,16 @@
     max-width: 40rem;
     margin: 40px auto;
     padding: 2rem;
-    background: rgb(136, 209, 233);
+    background: #ffd8a8;
     border-radius: 20px;
     box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
 }
 
 .signup-form input {
@@ -17,16 +21,17 @@
     border-radius: 4px;
     border: 1px solid #ccc;
     box-sizing: border-box;
-    background: rgb(70, 183, 221);
-    color:black;
+    background: #f4ac54;
+    color:#772522;
     border:none;
 }
 
 .signup-form label {
     display: block;
+    padding-top: 15px;
     margin-bottom: 0.5rem;
     font-weight: bold;
-    color: #0d4695;
+    color: #772522;
 }
 
 /* Bouton */
@@ -35,16 +40,6 @@
     margin: 0 30px;
     border: none;
     font-weight: bold;
-}
-
-.button-login {
-    width: 300px;
-    padding: 0.7rem;
-    background-color: black;
-    color: white;
-    border-radius: 8px;
-    cursor: pointer;
-    margin: 0;
 }
 
 /* Style du checkboxes */
@@ -95,9 +90,11 @@
 
 .titre {
     margin-bottom: 5px;
+    color: #772522;
 }
 
 .message {
     margin-top: 5px;
     margin-bottom: 23px;
+    color: #772522;
 }

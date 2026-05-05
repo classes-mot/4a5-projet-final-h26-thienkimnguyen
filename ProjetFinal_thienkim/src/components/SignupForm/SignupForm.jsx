@@ -21,7 +21,7 @@ function SignupForm() {
     return (
         <form onSubmit={handleSubmit} className="signup-form">
             <h1 className="titre">S'enregistrer</h1>
-            <h2 className="message">Goûtez au Vietnam à chaque bouchée.</h2>
+            <h2 className="message">Goûtez le Vietnam avec chaque bouchée</h2>
 
             {/* Les inputs des noms et des prénoms des utilisateurs */}
             <div className="control-row">

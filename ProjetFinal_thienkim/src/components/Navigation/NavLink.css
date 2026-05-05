@@ -8,6 +8,11 @@
   flex-direction: column;
   align-items: center;
   gap:20px;
+  background-color: #772522;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
 }
 
 .nav-links li {
@@ -17,17 +22,16 @@
 
 .nav-links a {
   border: 1px solid transparent;
-  color: #272dab;
+  color: white;
   text-decoration: none;
   padding: 0.5rem;
-
 }
 
 .nav-links a:hover,
 .nav-links a:active,
 .nav-links a.active {
-  background: rgb(137, 142, 245);
-  color: #09285d;
+  background: #e18413;
+  color: white;
   border-radius:50px;
   opacity: 50;
   padding:15px;
@@ -49,7 +53,7 @@
 .nav-links button:hover,
 .nav-links button:active {
   background: #292929;
-  color: white;
+  /* color: white; */
 }
 
 @media (min-width: 768px) {
@@ -62,7 +66,7 @@
   }
 
   .nav-links a {
-    color: #272dab;
+    color: white;
     text-decoration: none;
     white-space: nowrap;
   }

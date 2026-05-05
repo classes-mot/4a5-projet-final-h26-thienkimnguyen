@@ -3,12 +3,16 @@
     max-width: 40rem;
     margin: 40px auto;
     padding: 2rem;
-    background: rgb(136, 209, 233);
+    background: #ffd8a8;
     border-radius: 20px;
     box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
 }
 
 .login-form input {
@@ -17,9 +21,13 @@
     border-radius: 4px;
     border: 1px solid #ccc;
     box-sizing: border-box;
-    background: rgb(70, 183, 221);
+    background: #f4ac54;
     color:black;
     border:none;
+}
+
+.login-form h2 {
+    color: #772522;
 }
 
 .login-form p {
@@ -37,7 +45,7 @@
     display: block;
     margin-bottom: 0.5rem;
     font-weight: bold;
-    color: #0d4695;
+    color: #772522;
 }
 
 .form-actions {
@@ -51,8 +59,8 @@
 .button-login {
     width: 300px;
     padding: 0.7rem;
-    background-color: black;
-    color: white;
+    background-color: #772522;
+    color: #ffd8a8;
     border-radius: 8px;
     cursor: pointer;
     margin: 0;
@@ -68,7 +76,7 @@
     font-size: 0.75rem;
     background: none;
     border: none;
-    color: #48bfe0;
+    color: #772522;
     text-decoration: underline;
     font-weight: bold;
     cursor: pointer;

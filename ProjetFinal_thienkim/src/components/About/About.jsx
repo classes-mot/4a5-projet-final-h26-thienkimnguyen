@@ -8,13 +8,12 @@ function About() {
 
   return (
     <div className="about-container">
-      <h2 className="about-title">Bienvenue sur notre page!</h2>
+      <h2 className="about-title">Bienvenue à Hanoi Maison !</h2>
 
       <div className="about-information">
         <p>
-          Notre restaurant souhaite partager et vous faire découvrir la cuisine vietnamienne authentique.<br />
-          Explorez avec nous les différentes saveurs du Vietnam.<br />
-          Cherchez et commandez ici!
+          Découvrer l'authencité de la cuisine vietnamienne à travers nos saveurs artisinales<br />
+          Explorez notre menu et commandez dès maintenant !
         </p>
       </div>
 
@@ -25,19 +24,20 @@ function About() {
       <div className="about-information">
         <p>
           Vous préférez ne pas commander en ligne?<br />
-          Venez nous rendre visite au restaurant à : <br />
+          Venez nous rendre visite au restaurant au : <br />
           <a href="#" onClick={handleAddressClick} className="address-link">
             1234 Rue de Saigon, Laval, QC H2V 3P4
           </a>
         </p>
 
         <p>
-          Vous ne savez pas quand nous sommes ouverts ? <br />
-          Nous sommes ouverts tous les jours, sauf les <strong>fins de semaine</strong>, afin de permettre à notre 
-          personnel de se reposer et de préparer le service de la semaine.
+          Nous sommes ouverts tous les jours, sauf les <strong>fins de semaine</strong>.<br />
+          Ce temps de repos permet à notre équipe de se préparer pour mieux vous servir durant la semaine.
         </p>
 
-        <h3>Ouverture</h3>
+        <hr></hr>
+
+        <h2>Ouverture</h2>
 
         <div className="openings">
             <p>
@@ -58,11 +58,11 @@ function About() {
       <div className="about-nouvelle">
         <h3>Nouvelles!</h3>
         <p>
-          En raison de problèmes techniques, nous ne pouvons actuellement 
-          pas accueillir de clients au restaurant.
+          En raison de contraintes techniques imprévues, notre salle à manger est temporairement fermée. 
         </p>
         <p className="highlight-text">
-          Bonne nouvelle! Nous prenons toujours les commandes en ligne!
+          Bonne nouvelle ! Notre cuisine reste ouverte et nous continuons de prépaprer vos plats préférés.
+          Les commandes en lignes sont toujous disponibles !
         </p>
       </div>
 
@@ -73,18 +73,16 @@ function About() {
             Découvrez nos collaborateurs!
         </h3>
         <p>
-            Au cœur de notre restaurant se trouve une famille de deux personnes, 
-            originaires du sud du Vietnam. Notre cuisine est dirigée par un couple 
-            passionné qui partage le savoir-faire culinaire, échangeant souvent 
-            les rôles pour sublimer chaque plat. Nous sommes également épaulés 
-            par une équipe de personnes ferventes qui partagent un amour profond 
-            pour la cuisine vietnamienne. 
+            Porté par une famille du sud du Vietnam, notre restaurant est le fruit du travail d'un couple passionné et d'une équipe dévouée. 
+            Ensemble, nous unissons notre savoir-faire pour sublimer l'authenticité de la cuisine vietnamienne. 
         </p>
 
+        <h3>Carrières</h3>
+
         <p>
-            Bien que nous n'ayons actuellement aucun 
-            poste à pourvoir, nous vous invitons à consulter régulièrement 
-            notre page pour être informé(e) des prochaines opportunités.
+            
+            Aucun poste n'est disponible pour le moment, 
+            mais n'hésitez pas à nous suivre pour nos futures opportunités
         </p>
       </div>
     </div>

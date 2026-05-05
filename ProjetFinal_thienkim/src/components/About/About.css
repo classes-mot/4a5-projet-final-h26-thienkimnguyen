@@ -6,55 +6,89 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color : #ffdd87;
+    background-color : #ffd8a8;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: norma;
+    font-style: normal;
+    border-radius: 30px;
+    margin-bottom: 80px;
 }
 
 .about-title {
-    color: #000000;
+    color: #772522;
     text-align: center;
     margin-bottom: 1rem;
     width: 100%;
+
+    font-family: "Fraunces", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+        "SOFT" 0,
+        "WONK" 0;
 }
 
 hr {
     width: 40%;
     margin: auto;
     border: 1px solid;
+    color: #f4ac54;
 }
 
 .about-information p {
     line-height: 1.6;
     margin-bottom: 1.5rem;
     text-align: center;
+    color: #772522;
 }
 
-.about-information h3 {
+.about-information h2 {
     text-align: center;
+    color: #772522;
+    margin-bottom: 0px;
+    font-family: "Fraunces", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+        "SOFT" 0,
+        "WONK" 0;
 }
 
 .openings {
-    background-color: #3e7b1e;
     color: #fdf5e6;
     padding: 15px 25px;
     border-radius: 8px;
     width: fit-content;
     margin: 0 auto 2rem auto;
     margin-bottom: 30px;
+    font-weight: 700;
 }
 
 .about-nouvelle h3 {
     text-align: center;
+    color: #772522;
+    font-family: "Fraunces", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+        "SOFT" 0,
+        "WONK" 0;
 }
 
 .about-nouvelle p {
     text-align: center;
+    color: #772522;
 }
 
 .address-link {
-    color: #4caf50;
+    color: #772522;
     text-decoration: none;
     font-weight: bold;
-    background-color: #fcd573;
+    background-color: #facc93;
     padding: 0px 10px 10px 10px;
 }
 
@@ -64,7 +98,7 @@ hr {
 
 .about-nouvelle {
     width: 100%;
-    background-color: #fcd573;
+    background-color: #facc93;
 }
 
 .about-information {
@@ -73,8 +107,18 @@ hr {
 
 .about-application h3{
     text-align: center;
+    color: #772522;
+    font-family: "Fraunces", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+        "SOFT" 0,
+        "WONK" 0;
 }
 
 .about-application p{
     text-align: center;
+    color: #772522
 }
+;

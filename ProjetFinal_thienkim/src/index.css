@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(0, 0, 0, 0.87);
-  background-color: #fee5c7;
+  background-color: #772522;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -14,13 +14,13 @@
 }
 
 a {
-  font-weight: 350;
+  /* font-weight: 350; */
   /* color: #4b54f8; */
-  color: green;
+  color: #ffd8a8;
   text-decoration: inherit;
 }
 a:hover {
-  color: #4b54f8;
+  color: #f4ac54;
 }
 
 body {

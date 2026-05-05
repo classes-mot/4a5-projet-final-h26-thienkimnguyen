@@ -2,7 +2,11 @@
     background-color: #ffb341;
     padding: 30px 0;
     text-align: center;
-    color: white;
+    color: #772522;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
 }
 
 .footer-nav-vertical {
@@ -15,7 +19,7 @@
 
 .foot-link {
     text-decoration: none;
-    color: #9da3a8;
+    color: #772522;
     font-size: 1rem;
     transition: color 0.3s ease;
 }
@@ -27,6 +31,6 @@
 
 .copyright {
     font-size: 0.8rem;
-    color: #5c636a;
+    color: #772522;
     margin-top: 20px;
 }
