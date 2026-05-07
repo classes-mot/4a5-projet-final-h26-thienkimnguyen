@@ -90,6 +90,7 @@ hr {
     font-weight: bold;
     background-color: #facc93;
     padding: 0px 10px 10px 10px;
+    border-radius: 5px;
 }
 
 .address-link:hover {
@@ -99,6 +100,7 @@ hr {
 .about-nouvelle {
     width: 100%;
     background-color: #facc93;
+    border-radius: 15px;
 }
 
 .about-information {

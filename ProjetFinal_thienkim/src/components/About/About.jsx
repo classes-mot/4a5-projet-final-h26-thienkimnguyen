@@ -70,7 +70,7 @@ function About() {
 
       <div className="about-application">
         <h3>
-            Découvrez nos collaborateurs!
+            Découvrez nos collaborateurs !
         </h3>
         <p>
             Porté par une famille du sud du Vietnam, notre restaurant est le fruit du travail d'un couple passionné et d'une équipe dévouée. 

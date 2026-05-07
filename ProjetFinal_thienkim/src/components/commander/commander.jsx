@@ -1,73 +1,33 @@
-export const foodList = [
-    {
-        name: 'Bành Canh',
-        category: 'Soup',
-        spice: 0,
-        cover: ,
-        price: 15
-    },
-    {
-        name: 'Hủ Tiếu',
-        category: 'Soup',
-        spice: 0,
-        cover: ,
-        price: 13
-    },
-    {
-        name: 'Canh Chua',
-        category: 'Soup',
-        spice: 1,
-        cover: ,
-        price: 10
-    },
-    {
-        name: 'Bún Riêu ',
-        category: 'Soup',
-        spice: 0,
-        cover: ,
-        price: 22
-    },
-    {
-        name: 'Bún Bò Huế ',
-        category: 'Soup',
-        spice: 2,
-        cover: ,
-        price: 23
-    },
-    {
-        name: 'Phô au bœuf',
-        category: 'Soup',
-        spice: ,
-        cover: ,
-        price:
-    },
-    {
-        name: '',
-        category: '',
-        spice: ,
-        cover: ,
-        price:
-    },
-    {
-        name: '',
-        category: '',
-        spice: ,
-        cover: ,
-        price:
-    },
-    {
-        name: '',
-        category: '',
-        spice: ,
-        cover: ,
-        price:
-    },
-    {
-        name: '',
-        category: '',
-        spice: ,
-        cover: ,
-        price:
-    },
+import { foodList } from "../../data/foodList";
+import { useState } from "react";
+import TypesFood from "../TypesFood/Types";
+import FoodItem from "../foodItem/foodItem.jsx";
+import "./Commander.css";
 
-]
+function Commander() {
+  const [typeActive, setTypeActive] = useState("");
+  const types = foodList.reduce(
+    (acc, food) => (acc.includes(food.type) ? acc : acc.concat(food.type)),
+    [],
+  );
+  
+  return (
+    <div className="commander-list">
+      <TypesFood types={types} setTActive={setTypeActive} />
+      <ul className="food-list">
+  {foodList.map((food, index) => !typeActive || food.type === typeActive ? (
+      <li key={`${food.id}-${index}`}> 
+        <FoodItem
+          cover={food.cover}
+          name={food.name}
+          price={food.price}
+        />
+      </li>
+    ) : null
+  )}
+</ul>
+    </div>
+  );
+}
+
+export default Commander;

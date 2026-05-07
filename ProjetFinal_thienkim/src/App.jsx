@@ -8,6 +8,7 @@ import RootLayout from "./containers/roots.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
 import LoginForm from './components/LoginForm/LoginForm.jsx';
 import About from "./components/About/About.jsx";
+import Commander from "./components/commander/Commander.jsx"
 
 
 
@@ -21,7 +22,7 @@ const routerLoggedIn = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       { path : "", element: <About></About>},
-      // { path : "add", element: <Order></Order>},
+      { path : "/order", element: <Commander></Commander>},
       // { path : "/review", element: <Review></Review>},
       // { path : "/review/new", element: <NewReview></NewReview>},
       { path : "/login", element: <Navigate to="/" replace />},
@@ -36,6 +37,7 @@ const routerNotLoggedIn = createBrowserRouter([
     errorElement: <ErrorPage></ErrorPage>,
     children: [
       { path: "", element: <About></About> },
+      { path : "/order", element: <Commander></Commander>},
       { path: "/login", element: <LoginForm></LoginForm>},
       { path: "/signup", element: <Signup></Signup>},
     ],
@@ -84,4 +86,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

@@ -1,0 +1,22 @@
+.food-types {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+}
+
+
+.types-select {
+    appearance: none;
+    background-color: #f6ce9d;
+    border: 1px solid #f6ce9d;
+    color: #772522;
+    padding: 10px 40px 10px 15px;
+    border-radius: 5px;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='%23f6ce9d' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    font-weight: bold;
+ }
