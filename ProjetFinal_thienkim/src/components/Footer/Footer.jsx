@@ -7,9 +7,9 @@ function Footer(){
             <div className="foot-elem">
                 <h4> Maison Hanoi </h4>
                 <nav className="footer-nav">
-                    <Link to="/about" className="foot-link">À propos</Link>
+                    <Link to="/" className="foot-link">À propos</Link>
                     <Link to="/order" className="foot-link">Commander</Link>
-                    <Link to="/reviews" className="foot-link">Avis</Link>
+                    <Link to="/review" className="foot-link">Avis</Link>
                 </nav>
 
                 <p className="copyright">

@@ -39,8 +39,7 @@
 
 .nav-links button {
   cursor: pointer;
-  border: 1px solid #292929;
-  color: #292929;
+  color: white;
   background: transparent;
   padding: 0.5rem;
   font: inherit;
@@ -52,8 +51,8 @@
 
 .nav-links button:hover,
 .nav-links button:active {
-  background: #292929;
-  /* color: white; */
+  background: #e18413;
+  color: white;
 }
 
 @media (min-width: 768px) {

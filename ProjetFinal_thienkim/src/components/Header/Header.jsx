@@ -7,11 +7,9 @@ import SideDrawer from "../Navigation/SideDrawer.jsx";
 import Backdrop from "../UIElements/Backdrop.jsx";
 import { useState } from "react";
 
-
-
-
 function Header(){
     const [drawerIsOpen, setDrawerIsOpen] = useState(false);
+    
     let title = "Maison Hanoi";
 
     const openDrawer = () => {

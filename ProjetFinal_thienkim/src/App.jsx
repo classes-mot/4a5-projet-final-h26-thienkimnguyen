@@ -14,6 +14,9 @@ import LoginForm from "./components/LoginForm/LoginForm.jsx";
 import About from "./components/About/About.jsx";
 import Commander from "./components/commander/Commander.jsx";
 import Signup from "./pages/Signup.jsx";
+import NewReview from "./containers/NewAvis.jsx";
+import Review from "./components/AvisPage/AvisPage.jsx";
+import { AVIS } from "./data/avis.js";
 
 function App() {
   const storedIsLogin = sessionStorage.getItem("isLoggedIn");
@@ -31,6 +34,17 @@ function App() {
 
   useEffect(() => {
     localStorage.setItem("panier", JSON.stringify(panier));
+  });
+
+
+  const [reviews, setReviews] = useState(() => {
+    const savedReviews = localStorage.getItem("reviews");
+    return savedReviews ? JSON.parse(savedReviews) : AVIS; 
+  });
+
+
+  useEffect(() => {
+    localStorage.setItem("reviews", JSON.stringify(reviews));
   });
 
   function addToPanier(name, price) {
@@ -51,6 +65,16 @@ function App() {
     const panierFilter = panier.filter((food) => food.name !== name);
     majPanier(panierFilter);
   }
+
+  const addAvisHandler = (description) => {
+    const newEntry = {
+      id: Math.random().toString(), 
+      description: description,
+      creator: userEmail
+    };
+
+    setReviews((prevReviews) => [newEntry, ...prevReviews]);
+  };
   
   const loginHandler = (uid, email) => {
     sessionStorage.setItem("isLoggedIn", "true");
@@ -79,14 +103,15 @@ function App() {
           majPanier={majPanier}
           addToPanier={addToPanier}
           deleteItem={deleteItem}
+          addAvis={addAvisHandler}
         />
       ),
       errorElement: <ErrorPage />,
       children: [
         { path: "", element: <About></About> },
         { path: "/order", element: <Commander></Commander> },
-        // { path : "/review", element: <Review></Review>},
-        // { path : "/review/new", element: <NewReview></NewReview>},
+        { path : "/review", element: <Review items={reviews}/>},
+        { path : "/review/new", element: <NewReview></NewReview>},
       ],
     },
   ]);
@@ -104,6 +129,8 @@ function App() {
       children: [
         { path: "", element: <About></About> },
         { path: "/order", element: <Commander></Commander> },
+        { path : "/review", element: <Review items={reviews}/>},
+        { path : "/review/new", element: <NewReview></NewReview>},
         { path: "/login", element: <LoginForm></LoginForm> },
         { path: "/signup", element: <Signup></Signup> },
       ],
