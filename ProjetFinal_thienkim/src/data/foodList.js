@@ -116,12 +116,5 @@ export const foodList = [
         spice: 0,
         cover: bunbonuong,
         price: 16
-    },
-    {
-        name: 'Bún Bò Nướng',
-        type: 'Vermicelle',
-        spice: 0,
-        cover: bunbonuong,
-        price: 16
-    },
+    }
 ]

@@ -1,48 +1,19 @@
-import { useState } from 'react';
-import { AuthContext } from './context/AuthContext.js';
-import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
-import './App.css'
+import { useEffect, useState } from "react";
+import { AuthContext } from "./context/AuthContext.js";
+import {
+  createBrowserRouter,
+  Navigate,
+  RouterProvider,
+} from "react-router-dom";
+import "./App.css";
 import "./components/Header/Header.jsx";
 import "./components/Footer/Footer.jsx";
 import RootLayout from "./containers/roots.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
-import LoginForm from './components/LoginForm/LoginForm.jsx';
+import LoginForm from "./components/LoginForm/LoginForm.jsx";
 import About from "./components/About/About.jsx";
-import Commander from "./components/commander/Commander.jsx"
-
-
-
-
-import Signup from './pages/Signup.jsx';
-
-const routerLoggedIn = createBrowserRouter([
-  {
-    path: "/",
-    element: <RootLayout />,
-    errorElement: <ErrorPage />,
-    children: [
-      { path : "", element: <About></About>},
-      { path : "/order", element: <Commander></Commander>},
-      // { path : "/review", element: <Review></Review>},
-      // { path : "/review/new", element: <NewReview></NewReview>},
-      { path : "/login", element: <Navigate to="/" replace />},
-    ],
-  },
-]);
-
-const routerNotLoggedIn = createBrowserRouter([
-  {
-    path: "/",
-    element: <RootLayout></RootLayout>,
-    errorElement: <ErrorPage></ErrorPage>,
-    children: [
-      { path: "", element: <About></About> },
-      { path : "/order", element: <Commander></Commander>},
-      { path: "/login", element: <LoginForm></LoginForm>},
-      { path: "/signup", element: <Signup></Signup>},
-    ],
-  },
-]);
+import Commander from "./components/commander/Commander.jsx";
+import Signup from "./pages/Signup.jsx";
 
 function App() {
   const storedIsLogin = sessionStorage.getItem("isLoggedIn");
@@ -53,27 +24,95 @@ function App() {
   const [userId, setUserId] = useState(storedUserId);
   const [userEmail, setUserEmail] = useState(storedUserEmail);
 
+  const savedPanier = localStorage.getItem("panier");
+  const [panier, majPanier] = useState(
+    savedPanier ? JSON.parse(savedPanier) : [],
+  );
+
+  useEffect(() => {
+    localStorage.setItem("panier", JSON.stringify(panier));
+  });
+
+  function addToPanier(name, price) {
+    const currentFood = panier.find((food) => food.name === name);
+    if (currentFood) {
+      const panierFilterFood = panier.filter((food) => food.name !== name);
+
+      majPanier([
+        ...panierFilterFood,
+        { name, price, amount: currentFood.amount + 1 },
+      ]);
+    } else {
+      majPanier([...panier, { name, price, amount: 1 }]);
+    }
+  }
+
+  function deleteItem(name) {
+    const panierFilter = panier.filter((food) => food.name !== name);
+    majPanier(panierFilter);
+  }
+  
   const loginHandler = (uid, email) => {
-    sessionStorage.setItem("isLoggedIn", "true")
-    sessionStorage.setItem("userId", uid)
-    sessionStorage.setItem("userEmail", email)
+    sessionStorage.setItem("isLoggedIn", "true");
+    sessionStorage.setItem("userId", uid);
+    sessionStorage.setItem("userEmail", email);
     setUserId(uid);
     setIsLoggedIn(true);
     setUserEmail(email);
-  }
+  };
 
   const logoutHandler = () => {
-    sessionStorage.setItem("userId", null)
-    sessionStorage.setItem("userEmail", null)
-    sessionStorage.setItem("isLoggedIn", "false")
+    sessionStorage.setItem("userId", null);
+    sessionStorage.setItem("userEmail", null);
+    sessionStorage.setItem("isLoggedIn", "false");
     setIsLoggedIn(false);
     setUserId(null);
     setUserEmail(null);
-  }
+  };
+
+  const routerLoggedIn = createBrowserRouter([
+    {
+      path: "/",
+      element: (
+        <RootLayout
+          panier={panier}
+          majPanier={majPanier}
+          addToPanier={addToPanier}
+          deleteItem={deleteItem}
+        />
+      ),
+      errorElement: <ErrorPage />,
+      children: [
+        { path: "", element: <About></About> },
+        { path: "/order", element: <Commander></Commander> },
+        // { path : "/review", element: <Review></Review>},
+        // { path : "/review/new", element: <NewReview></NewReview>},
+      ],
+    },
+  ]);
+
+  const routerNotLoggedIn = createBrowserRouter([
+    {
+      path: "/",
+      element: <RootLayout
+          panier={panier}
+          majPanier={majPanier}
+          addToPanier={addToPanier}
+          deleteItem={deleteItem}
+        />,
+      errorElement: <ErrorPage></ErrorPage>,
+      children: [
+        { path: "", element: <About></About> },
+        { path: "/order", element: <Commander></Commander> },
+        { path: "/login", element: <LoginForm></LoginForm> },
+        { path: "/signup", element: <Signup></Signup> },
+      ],
+    },
+  ]);
 
   return (
     <AuthContext.Provider
-      value = {{
+      value={{
         isLoggedIn: isLoggedIn,
         userId: userId,
         email: userEmail,
@@ -81,9 +120,11 @@ function App() {
         logout: logoutHandler,
       }}
     >
-      <RouterProvider router={isLoggedIn ? routerLoggedIn : routerNotLoggedIn}></RouterProvider>
+      <RouterProvider
+        router={isLoggedIn ? routerLoggedIn : routerNotLoggedIn}
+      ></RouterProvider>
     </AuthContext.Provider>
-  )
+  );
 }
 
 export default App;

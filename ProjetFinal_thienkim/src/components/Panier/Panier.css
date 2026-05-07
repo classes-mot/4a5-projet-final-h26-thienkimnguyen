@@ -1,0 +1,57 @@
+.hanoi-panier {
+    position: fixed; 
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    max-height: 70vh;
+    overflow-y: auto;
+    background-color: transparent;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3); 
+    z-index: 999; 
+    backdrop-filter: blur(8px);
+}
+
+.panier-open{
+    position: fixed; 
+    bottom: 30px; 
+    right: 30px;
+    z-index: 1000;
+}
+
+.panier-toggle {
+    background-color: #f6ce9d;
+    color: #772522;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.2s;
+}
+
+.panier-toggle:hover {
+    transform: scale(1.05); 
+}
+
+.food-delete {
+    background-color: #f6ce9d;
+    color: #772522;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.panier-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.panier-vider {
+    background-color: #f6ce9d;
+    color: #772522;
+    margin: 5px;
+}
