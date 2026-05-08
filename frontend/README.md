@@ -1,17 +1,26 @@
-# React + Vite
+## Maquette
+![Maquette de la page d'accueil](./src/assets/apropos.jpg)
+![Maquette de la page de command](./src/assets/commander.jpg)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Point de terminaison d'Api
+Users
+* POST /register : La création d'un nouveau compte
+* POST /login : Vérification de l'utilisateur
 
-Currently, two official plugins are available:
+Avis(Reviews)
+* GET / : Récupération tous les avis
+* GET /:aid : Récupération des détails d'un avis
+* POST / : Permet à l'utilisateur de créer un nouvel avis
+* DELETE : Permet à l'utilisateur de supprimer leur avis
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Page Front end
+Page Publiques
+* Page d'accueil : Présente le site
+* Page de commande : Page pour commander
+* Page d'avis : Page où se situe tous les avis(reviews) des clients
+* Bouton de déconnection
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Page Protégées
+* Page Ajouter un Avis : Ajouter un nouveau avis
+* Page Modifier : Modification d'un avis de l'utilisateur
 
