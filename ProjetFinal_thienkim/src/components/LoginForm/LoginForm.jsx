@@ -1,13 +1,15 @@
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext.js";
-
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 
 import "../LoginForm/LoginForm.css";
 
 function LoginForm(){
     const auth = useContext(AuthContext);
     const navigate = useNavigate();
+    const { t } = useTranslation();
 
     function handleSubmit(event){
         event.preventDefault();
@@ -25,25 +27,25 @@ function LoginForm(){
 
     return(
     <form className="login-form" onSubmit={handleSubmit}>
-        <h2>Se Connecter</h2>
+        <h2>{t('login.titre')}</h2>
 
         <div className="control-email">
-            <label htmlFor="email">Adresse Courriel</label>
+            <label htmlFor="email">{t('login.courriel')}</label>
             <input id="email" name="email" type="email" required></input>
         </div>
 
         <div className="control-password">
-            <label htmlFor="password">Mot de Passe</label>
+            <label htmlFor="password">{t('login.password')}</label>
             <input id="password" name="password" type="password" required></input>
         </div>
         
         <p className="form-actions">
-            <button type="submit" className="button-login">Se Connecter</button>
+            <button type="submit" className="button-login">{t('login.titre')}</button>
 
             <span className="signup-text">
-                Vous n'avez pas de compte?
+                {t('login.question')}
                 <Link to="/signup" className="button-signup">
-                    Inscrivez-vous dès maintenant
+                    {t('login.signup')}
                 </Link>
             </span>
         </p>

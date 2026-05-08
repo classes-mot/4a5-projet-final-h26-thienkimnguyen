@@ -2,6 +2,8 @@ import "./Panier.css";
 import { useState } from "react";
 import { useRef } from "react";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 
 export default function Panier({ panier, majPanier, deleteItem }) {
   const [isOpen, setIsOpen] = useState(true);
@@ -10,6 +12,7 @@ export default function Panier({ panier, majPanier, deleteItem }) {
     0
   );
   const counter = useRef(0);
+  const { t } = useTranslation();
   
   useEffect(()=>{
     counter.current++;
@@ -41,11 +44,11 @@ export default function Panier({ panier, majPanier, deleteItem }) {
               </li>
             ))}
           </ul>
-          <h3>Total :{total}$</h3>
-          <button className="panier-vider" onClick={() => majPanier([])}>Vider</button>
+          <h3>{t('panier.total')}{total}$</h3>
+          <button className="panier-vider" onClick={() => majPanier([])}>{t('panier.vider')}</button>
         </div>
       ) : (
-        <div>Commencer à commander</div>
+        <div>{t('panier.commencer')}</div>
       )}
     </div>
   ) : (

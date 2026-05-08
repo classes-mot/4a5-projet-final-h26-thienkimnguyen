@@ -4,6 +4,8 @@ import { useOutletContext } from "react-router-dom";
 import TypesFood from "../TypesFood/Types";
 import FoodItem from "../foodItem/foodItem.jsx";
 import "./Commander.css";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 
 function Commander() {
   const { addToPanier } = useOutletContext();
@@ -12,6 +14,7 @@ function Commander() {
     (acc, food) => (acc.includes(food.type) ? acc : acc.concat(food.type)),
     [],
   );
+  const { t } = useTranslation();
   
   return (
     <div className="commander-list">
@@ -25,7 +28,7 @@ function Commander() {
           price={food.price}
         >
           <button className="add-panier" onClick={() => addToPanier(food.name, food.price)}>
-            Ajouter
+            {t('commander.ajouter')}
           </button>
         </FoodItem>
         

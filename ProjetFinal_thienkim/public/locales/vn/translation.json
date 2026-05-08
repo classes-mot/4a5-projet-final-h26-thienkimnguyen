@@ -1,0 +1,74 @@
+{
+   "nav": {
+        "propos": "Giới thiệu",
+        "commander": "Đặt món",
+        "avis": "Đánh giá",
+        "login": "Đăng nhập",
+        "logout": "Đăng xuất"
+   },
+   "propos": {
+    "bienvenue": "Chào mừng bạn đến với Maison Hanoi!",
+    "information_1": "Khám phá hương vị ẩm thực Việt Nam nguyên bản qua những món ăn được chế biến thủ công",
+    "information_2": "Khám phá thực đơn và đặt món ngay bây giờ!",
+    "h2_title": "Chia sẻ, Thưởng thức, Ăn ngon",
+    "information_3": "Bạn không muốn đặt hàng trực tuyến?",
+    "information_4": "Hãy đến thăm chúng tôi tại nhà hàng ở địa chỉ:",
+    "rue": "1234 Rue de Saigon, Laval, QC H2V 3P4",
+    "information_5.1": "Chúng tôi mở cửa tất cả các ngày trong tuần, ngoại trừ ",
+    "information_5.2": "cuối tuần",
+    "information_5.3": "Thời gian nghỉ ngơi này giúp đội ngũ của chúng tôi chuẩn bị tốt hơn để phục vụ bạn trong suốt cả tuần.",
+    "ouverture_title": "Giờ mở cửa",
+    "ouverture_jours": "Thứ Hai - Thứ Sáu",
+    "ouverture_fin": "Thứ Bảy & Chủ Nhật",
+    "nouvelles": "Tin mới!",
+    "nouvelles_mauvaise": "Do một số hạn chế kỹ thuật ngoài ý muốn, phòng ăn của chúng tôi tạm thời đóng cửa.",
+    "nouvelles_bonne": "Tin vui! Nhà bếp của chúng tôi vẫn hoạt động và tiếp tục chế biến các món ăn yêu thích của bạn. Bạn vẫn có thể đặt hàng trực tuyến!",
+    "application": "Gặp gỡ đội ngũ của chúng tôi!",
+    "application_information": "Được xây dựng bởi một gia đình đến từ miền Nam Việt Nam, nhà hàng của chúng tôi là thành quả của một cặp vợ chồng đầy nhiệt huyết và một đội ngũ tận tâm. Cùng nhau, chúng tôi kết hợp bí quyết của mình để tôn vinh sự tinh túy của ẩm thực Việt Nam.",
+    "carriere": "Tuyển dụng",
+    "carriere_info": "Hiện tại chúng tôi chưa có vị trí nào đang tuyển, nhưng đừng ngần ngại theo dõi chúng tôi để cập nhật các cơ hội trong tương lai."
+  },
+  "commander": {
+      "ajouter": "Thêm",
+      "type": "Loại món"
+   },
+   "categories": {
+    "Soup": "Món Súp",
+    "Riz": "Cơm",
+    "Vermicelle": "Bún"
+  },
+  "panier": {
+    "total": "Tổng cộng: ",
+    "vider": "Xóa giỏ hàng",
+    "commencer": "Bắt đầu đặt món"
+  },
+  "avis": {
+    "titre": "Đánh giá",
+    "phrase": "Khám phá trải nghiệm của khách hàng",
+    "phrase_ajouter": "Thêm đánh giá",
+    "titre_sub1": "Đánh giá mới",
+    "titre_sub2": "Hãy cho chúng tôi biết suy nghĩ của bạn!",
+    "reset": "Thiết lập lại",
+    "ajouter": "Thêm",
+    "retour": "Quay lại"
+  },
+  "login": {
+    "titre": "Đăng nhập",
+    "courriel": "Địa chỉ Email",
+    "password": "Mật khẩu",
+    "question": "Bạn chưa có tài khoản?",
+    "signup": "Đăng ký ngay"
+  },
+  "signup": {
+    "titre": "Đăng ký",
+    "message": "Thưởng thức hương vị Việt Nam trong từng lời ăn",
+    "prenom": "Tên",
+    "nom": "Họ",
+    "courriel": "Địa chỉ Email",
+    "password": "Mật khẩu",
+    "confirmer": "Xác nhận mật khẩu",
+    "erreur": "Mật khẩu không khớp",
+    "news": "Tôi muốn nhận thông tin về các món ăn mới và ưu đãi qua email.",
+    "terms": "Tôi đồng ý với các điều khoản và điều kiện."
+   }
+}

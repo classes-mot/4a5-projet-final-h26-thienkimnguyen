@@ -1,0 +1,74 @@
+{
+   "nav": {
+        "propos": "À propos",
+        "commander": "Commander",
+        "avis": "Avis",
+        "login": "Se connecter",
+        "logout": "Se déconnecter"
+   },
+   "propos": {
+      "bienvenue": "Bienvenue à Maison Hanoi !",
+      "information_1": "Découvrer l'authencité de la cuisine vietnamienne à travers nos saveurs artisinales",
+      "information_2": "Explorez notre menu et commandez dès maintenant !",
+      "h2_title" : "Partagez, Goûtez, Mangez",
+      "information_3": "Vous préférez ne pas commander en ligne?",
+      "information_4": "Venez nous rendre visite au restaurant au : ",
+      "rue": "1234 Rue de Saigon, Laval, QC H2V 3P4",
+      "information_5.1": "Nous sommes ouverts tous les jours, sauf les ",
+      "information_5.2": "fins de semaine",
+      "information_5.3": "Ce temps de repos permet à notre équipe de se préparer pour mieux vous servir durant la semaine.",
+      "ouverture_title": "Ouverture",
+      "ouverture_jours": "Lundi - Vendredi ",
+      "ouverture_fin": "Samedi & Dimanche ",
+      "nouvelles": "Nouvelles!",
+      "nouvelles_mauvaise": "En raison de contraintes techniques imprévues, notre salle à manger est temporairement fermée. ",
+      "nouvelles_bonne": "Bonne nouvelle ! Notre cuisine reste ouverte et nous continuons de prépaprer vos plats préférés. Les commandes en lignes sont toujous disponibles !",
+      "application": "Découvrez nos collaborateurs !",
+      "application_information": " Porté par une famille du sud du Vietnam, notre restaurant est le fruit du travail d'un couple passionné et d'une équipe dévouée. Ensemble, nous unissons notre savoir-faire pour sublimer l'authenticité de la cuisine vietnamienne. ",
+      "carriere": "Carrières",
+      "carriere_info": "Aucun poste n'est disponible pour le moment, mais n'hésitez pas à nous suivre pour nos futures opportunités"
+   },
+   "commander": {
+      "ajouter": "Ajouter",
+      "type": "Type de plat"
+   },
+   "categories": {
+      "Riz": "Riz",
+      "Soup": "Soupe",
+      "Vermicelle": "Vermicelle"
+   },
+   "panier": {
+      "total": "Total : ",
+      "vider": "Vider",
+      "commencer": "Commencer à commander"
+   },
+   "avis": {
+      "titre": "Avis",
+      "phrase": "Découvrez les expériences de nos clients",
+      "phrase_ajouter": "Ajouter un avis",
+      "titre_sub1": "Nouvelle Avis",
+      "titre_sub2": "Dites nous ce que vous pensez !",
+      "reset": "Réinitialiser",
+      "ajouter": "Ajouter",
+      "retour": "Retour"
+   },
+   "login": {
+      "titre": "Se Connecter",
+      "courriel": "Adresse Courriel",
+      "password": "Mot de Passe",
+      "question": "Vous n'avez pas de compte?",
+      "signup": "Inscrivez-vous dès maintenant"
+   },
+   "signup": {
+      "titre": "S'enregistrer",
+      "message": "Goûtez le Vietnam avec chaque bouchée",
+      "prenom": "Prénom",
+      "nom": "Nom",
+      "courriel": "Adresse Courriel",
+      "password": "Mot de Passe",
+      "confirmer": "Confirmez le mot de passe",
+      "erreur": "Les mots de passe ne correspondent pas",
+      "news": "J'aimerais recevoir par courriel les nouveaux ajouts et les offres.",
+      "terms": "J'accepte les conditions générales."
+   }
+}

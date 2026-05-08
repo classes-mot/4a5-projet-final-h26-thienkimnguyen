@@ -1,4 +1,4 @@
-form {
+.avis-form {
   display: flex;
   flex-direction: column;
   max-width: 40rem;
@@ -11,7 +11,7 @@ form {
   text-align: center;
 }
 
-.control label {
+.desc {
   display: block;
   font-size: 0.8rem;
   margin-top: 10px;
@@ -27,14 +27,6 @@ form {
   color: #772522;
   text-transform: uppercase;
   font-weight: bold;
-}
-
-.control {
-  background-color: #f4ac547a;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-bottom: 20px;
-  border-radius: 20px;
 }
 
 .control textarea {
