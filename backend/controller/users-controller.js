@@ -1,0 +1,82 @@
+import jwt from 'jsonwebtoken';
+import { User } from '../models/users.js';
+import HttpError from '../util/http-error.js';
+
+const registerUser = async (req, res, next) => {
+    const { name, email, password, avis } = req.body;
+
+    let existantUser;
+
+    try {
+        existantUser = await User.findOne({email: email});
+    } catch (err) {
+        console.error(err);
+        const error = new HttpError('Enregistrement échouée, veuillez réessayer..', 500);
+        return next(error);
+    }
+
+    if (existantUser) {
+        res.status(422).json({message : 'Cet courriel a déjà été pris.'});
+        return;
+    }
+
+    const creerUser = new User ({
+        name,
+        email, 
+        password, 
+        avis : []
+    });
+
+    try {
+        await creerUser.save()
+    } catch (err) {
+        console.error(err);
+        const error = new HttpError('Enregistrement échouée..', 500);
+        return next(error);
+    }
+    console.log('Enregistrer!');
+    res.status(201).json({ user : creerUser.toObject({getters : true}) });
+};
+
+const connexionUser = async ( req, res, next) => {
+    const { email, password} = req.body;
+
+    let existantUser;
+
+    try {
+        existantUser = await User.findOne({ email : email});
+    } catch (err) {
+        console.error(err);
+        const error = new HttpError('Connexion échouée, veuillez réessayer..', 401);
+        return next(error);
+    }
+
+    if(!existantUser || existantUser.password !== password) {
+        const error = new HttpError('Veuillez vérifiez votre courriel ou votre mot de passe..', 401);
+        return next(error);
+    }
+
+    let token;
+
+    try {
+        token = jwt.sign(
+            { userId: existantUser.id, email: existantUser.email },
+            'cleSuperSecrete!',
+            { expiresIn: '1h'}
+        );
+    } catch (err) {
+        const error = new HttpError('Erreur lors de la génération du jeton, veuillez réessayer..', 500);
+        return next(error);
+    }
+
+    res.status(200).json({
+        userId : existantUser.id,
+        email : existantUser.email,
+        token,
+    });
+};
+
+export default {
+    registerUser,
+    connexionUser
+};

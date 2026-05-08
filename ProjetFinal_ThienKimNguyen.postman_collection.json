@@ -1,0 +1,202 @@
+{
+  "info": {
+    "_postman_id": "647978ed-df3d-489c-89e9-2e426199844a",
+    "name": "ProjetFinal_ThienKimNguyen",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52765627",
+    "_collection_link": "https://go.postman.co/collection/52765627-647978ed-df3d-489c-89e9-2e426199844a?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "/api/avis",
+      "item": [
+        {
+          "name": "Add Avis",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWZkNzIzNGE4NGRkY2ViMDRmNjk1ZDMiLCJlbWFpbCI6InRoaWVua2ltbmd1eWVuQGdtYWlsLmNvbSIsImlhdCI6MTc3ODIxNzU3NSwiZXhwIjoxNzc4MjIxMTc1fQ.ZiEGmlyLjw7MbXAMifjGg8e1TV0T8wC734ZSKTm6aJ4",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"description\" : \"Wow!! What delicious food!!\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/avis",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "avis"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Supprimer Avis",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "69fd73a43d9022c29008b941",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/avis/69fd73a43d9022c29008b941",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "avis",
+                "69fd73a43d9022c29008b941"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Avis",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "http://localhost:5000/api/jeux",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/avis",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "avis"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Avis",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/avis/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "avis",
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "/api/users",
+      "item": [
+        {
+          "name": "Inscription (USER)",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\" : \"Kim\",\r\n    \"email\" : \"thienkimnguyen@gmail.com\",\r\n    \"password\" : \"password\",\r\n    \"avis\" : []\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/users/register",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "users",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Connexion (USER)",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\" : \"thienkimnguyen@gmail.com\",\r\n    \"password\" : \"password\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/users/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "users",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

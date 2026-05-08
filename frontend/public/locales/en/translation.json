@@ -1,0 +1,79 @@
+{
+   "nav": {
+        "propos": "About",
+        "commander": "Order",
+        "avis": "Review",
+        "login": "Log in",
+        "logout": "Log out"
+   },
+   "propos": {
+    "bienvenue": "Welcome to Maison Hanoi!",
+    "information_1": "Discover the authenticity of Vietnamese cuisine through our artisanal flavors",
+    "information_2": "Explore our menu and order now!",
+    "h2_title": "Share, Taste, Eat",
+    "information_3": "Prefer not to order online?",
+    "information_4": "Come visit us at the restaurant at:",
+    "rue": "1234 Rue de Saigon, Laval, QC H2V 3P4",
+    "information_5.1": "We are open every day, except for ",
+    "information_5.2": "weekends",
+    "information_5.3": "This rest period allows our team to prepare to better serve you during the week.",
+    "ouverture_title": "Opening Hours",
+    "ouverture_jours": "Monday - Friday",
+    "ouverture_fin": "Saturday & Sunday",
+    "nouvelles": "News!",
+    "nouvelles_mauvaise": "Due to unforeseen technical constraints, our dining room is temporarily closed.",
+    "nouvelles_bonne": "Good news! Our kitchen remains open and we continue to prepare your favorite dishes. Online orders are still available!",
+    "application": "Meet our team!",
+    "application_information": "Carried by a family from southern Vietnam, our restaurant is the result of the hard work of a passionate couple and a dedicated team. Together, we combine our expertise to elevate the authenticity of Vietnamese cuisine.",
+    "carriere": "Careers",
+    "carriere_info": "No positions are available at the moment, but feel free to follow us for future opportunities."
+  },
+  "commander": {
+      "ajouter": "Add",
+      "type": "Type of dish"
+   },
+   "categories": {
+    "Soup": "Soup",
+    "Riz": "Rice",
+    "Vermicelle": "Vermicelli"
+  },
+  "panier": {
+    "total": "Total: ",
+    "vider": "Empty Cart",
+    "commencer": "Start ordering"
+  },
+  "avis": {
+    "titre": "Reviews",
+    "phrase": "Discover our customers' experiences",
+    "phrase_ajouter": "Add a review",
+    "titre_sub1": "New Review",
+    "titre_sub2": "Tell us what you think!",
+    "reset": "Reset",
+    "ajouter": "Add",
+    "retour": "Back"
+  },
+  "login": {
+    "titre": "Login",
+    "courriel": "Email Address",
+    "password": "Password",
+    "question": "Don't have an account?",
+    "signup": "Sign up now"
+  },
+  "signup": {
+    "titre": "Sign Up",
+    "message": "Taste Vietnam in every bite",
+    "prenom": "First Name",
+    "nom": "Last Name",
+    "courriel": "Email Address",
+    "password": "Password",
+    "confirmer": "Confirm Password",
+    "erreur": "Passwords do not match",
+    "news": "I would like to receive updates and offers by email.",
+    "terms": "I accept the terms and conditions."
+   },
+   "common": {
+    "modifier": "Edit",
+    "supprimer": "Delete"
+  }
+
+}
